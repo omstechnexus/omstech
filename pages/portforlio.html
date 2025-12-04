@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" class="">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/packages/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/src/style.css">
+
+  <title>About</title>
+</head>
+
+<body class="bg-gray-50 dark:bg-slate-900  text-black dark:text-white flex flex-col min-h-screen m-0 theme-transition">
+  <header class="fixed top-0 left-0 bg-transparent  z-1000  w-full theme-transition">
+    <div class="my-container">
+      <div class="flex justify-between items-center">
+
+        <a href="index.html" class="block   w-[90px] md:w-[110px]">
+          <img src="/src/images/logonew2.png" alt="oms" class=" block w-full h-full object-cover">
+        </a>
+
+        <div class="size-10  flex justify-center items-center"><i id="theme-toggle"
+            class=" text-white cursor-pointer far fa-moon text-[20px]"></i></div>
+
+        <!--Mobile Menu-->
+        <div id="mobile-menu"
+          class="flex  fixed top-0 -right-full   h-screen w-full  lg:right-0 transition-none lg:relative lg:h-fit lg:w-fit">
+
+          <div class="flex-1 bg-black/60 lg:hidden opacity-0" id="menu-overlay"></div>
+
+          <nav
+            class="w-[300px]  flex flex-col items-center justify-center  bg-slate-800 lg:w-fit transition-none lg:bg-inherit lg:relative lg:h-fit"
+            id="nav-bar">
+
+            <div id="collapse-menu"
+              class="size-10 text-white bg-inherit border border-white rounded-sm absolute top-4 right-4 flex items-center justify-center lg:hidden">
+              <i class="fas fas fa-chevron-right text-[20px]"></i>
+            </div>
+
+            <ul class="flex flex-col gap-10 lg:gap-10 lg:flex-row  text-white lg:text-slate-800">
+              <li><a href="/index.html" class="lg:text-white nav-transition">Home</a></li>
+              <li><a href="/pages/about.html" class="font-normal nav-transition lg:text-white">About</a></li>
+              <li><a href="/pages/portforlio.html" class="text-orange-500 font-bold active nav-transition">Portfolio</a></li>
+              <li><a href="/pages/contact.html" class="font-normal lg:text-white nav-transition">Contact</a></li>
+            </ul>
+          </nav>
+
+
+        </div>
+        <div id="menu-toggle"
+          class="border lg:hidden size-8 rounded-sm text-white  flex items-center justify-center">
+          <i class="fas fa-bars text-[20px]"></i>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+
+
+
+  <!--Page Section-->
+  <section
+    class="min-h-[40vh] md:min-h-[60vh] flex items-center  bg-[url('/src/images/hero-img.jpg')] bg-no-repeat bg-cover bg-bottom bg-fixed relative">
+    <div class="bg-black/70 absolute top-0 left-0 w-full h-full z-2"></div>
+    <div class="my-container relative z-10  h-full w-full">
+      <div class="">
+        <h1 class="text-white text-3xl  md:text-5xl font-bold text-center">Portfolio</h1>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <main class="flex-1">
+
+    
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <footer class="bg-slate-800 p-10 flex items-center justify-center border-4 border-red-700 mt-40">
+    <h1 class="text-white text-2xl">Footer</h1>
+  </footer>
+  <script src="packages/swiper-bundle.min.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

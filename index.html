@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en" class="">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/packages/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/src/style.css">
+
+  <title>Home</title>
+</head>
+
+<body
+  class="bg-gray-50 dark:bg-slate-900 dark:text-white   text-slate-800 flex flex-col min-h-screen m-0 slide:border-8 theme-transition">
+  <header class="fixed top-0 left-0 bg-transparent  z-1000  w-full theme-transition">
+    <div class="my-container">
+      <div class="flex justify-between items-center">
+
+        <a href="index.html" class="block   w-[90px] md:w-[110px]">
+          <img src="/src/images/logonew2.png" alt="oms" class=" block w-full h-full object-cover">
+        </a>
+
+        <div class="size-10  flex justify-center items-center"><i id="theme-toggle"
+            class=" text-white cursor-pointer far fa-moon text-[20px]"></i></div>
+
+        <!--Mobile Menu-->
+        <div id="mobile-menu"
+          class="flex  fixed top-0 -right-full   h-screen w-full  lg:right-0 transition-none lg:relative lg:h-fit lg:w-fit">
+
+          <div class="flex-1 bg-black/60 lg:hidden opacity-0" id="menu-overlay"></div>
+
+          <nav
+            class="w-[300px]  flex flex-col items-center justify-center  bg-slate-800 lg:w-fit transition-none lg:bg-inherit lg:relative lg:h-fit"
+            id="nav-bar">
+
+            <div id="collapse-menu"
+              class="size-10 text-white bg-inherit border border-white rounded-sm absolute top-4 right-4 flex items-center justify-center lg:hidden">
+              <i class="fas fas fa-chevron-right text-[20px]"></i>
+            </div>
+
+            <ul class="flex flex-col gap-10 lg:gap-10 lg:flex-row  text-white lg:text-slate-800">
+              <li><a href="" class=" text-orange-500 font-bold active nav-transition">Home</a></li>
+              <li><a href="/pages/about.html" class="font-normal lg:text-white nav-transition">About</a></li>
+              <li><a href="/pages/portforlio.html" class="font-normal lg:text-white nav-transition">Portfolio</a></li>
+              <li><a href="/pages/contact.html" class="font-normal lg:text-white nav-transition">Contact</a></li>
+            </ul>
+          </nav>
+
+
+        </div>
+        <div id="menu-toggle" class="border lg:hidden size-8 rounded-sm text-white  flex items-center justify-center">
+          <i class="fas fa-bars text-[20px]"></i>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+  <!--Hero Section-->
+  <section
+    class="min-h-[90vh] flex pt-30 pb-10  items-center  bg-[url('/src/images/hero-img.jpg')] bg-no-repeat bg-cover bg-center bg-fixed relative">
+    <div class="bg-black/70 absolute top-0 left-0 w-full h-full z-2"></div>
+    <div class="my-container relative z-10  h-full w-full">
+      <div class="lg:max-w-[800px]">
+
+        <h1
+          class="text-4xl lg:text-6xl text-white font-bold leading-tight text-pretty text-center sm:text-left animate-slideInLeft">
+          Transforming Ideas into Stunning Digital Experiences</h1>
+
+        <p class="text-white mt-4  text-pretty text-center sm:text-left animate-show">
+          We build a fast, responsive and user-friendly websites that helps you attract customers, showcase your brand
+          and achieve your goal
+        </p>
+
+        <a href="/pages/portforlio.html"
+          class="p-3 bg-blue-500 text-white rounded-md transition-colors duration-300 ease-in-out inline-block mt-6 font-medium hover:bg-blue-600">View
+          Our Work</a>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <main class=" flex-1">
+    <!--Our Services-->
+    <section class="py-8 pt-10">
+
+      <div class="my-container">
+        <div class="mb-10">
+          <h2 class="text-center text-2xl md:text-3xl font-semibold dark:text-white mb-1">Our
+            Services</h2>
+          <p class="text-center text-sm dark:text-white">Everything you need to build and grow your online
+            presence.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div class="p-8  bg-gray-100 rounded-lg dark:bg-slate-800 text-center md:text-left theme-transition faders">
+            <div
+              class="size-[60px] mb-4  mx-auto md:mx-0 rounded-full bg-green-100 shadow-lg flex items-center justify-center">
+              <i class="fas fas fa-code text-green-700 text-[25px]"></i>
+            </div>
+            <h2 class="text-xl font-semibold dark:text-white">Website Design</h2>
+            <p class="mt-2 text-sm dark:text-white">We create beautiful, user-friendly websites that reflect your
+              brand and engage your audience</p>
+          </div>
+
+          <div class="p-8  bg-gray-100 rounded-lg dark:bg-slate-800 text-center md:text-left theme-transition faders">
+            <div class="size-[60px] mb-4 mx-auto md:mx-0  rounded-full bg-blue-100 flex items-center justify-center"><i
+                class="fas fas fas fa-shopping-cart text-blue-700 text-[25px]"></i></div>
+            <h2 class="text-xl font-semibold dark:text-white">E-Commerce Development</h2>
+            <p class="mt-2 text-sm dark:text-white">Launch your online store with secure payment processing and
+              inventory management.</p>
+          </div>
+
+
+          <div class="p-8  bg-gray-100 rounded-lg dark:bg-slate-800 text-center md:text-left theme-transition faders">
+            <div class="size-[60px] mb-4  mx-auto md:mx-0 rounded-full bg-purple-100 flex items-center justify-center">
+              <i class="fas fas fas fas fa-tools text-purple-700 text-[25px]"></i>
+            </div>
+            <h2 class="text-xl font-semibold dark:text-white">Maintenance & Support</h2>
+            <p class="mt-2 text-sm dark:text-white">Keep your website running smoothly with regular updates,
+              backups
+              and technical support.</p>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!--Featured Projects-->
+    <section class="py-8 pt-10">
+
+
+      <div class="my-container">
+        <div class="mb-10">
+          <h2 class="text-center text-2xl md:text-3xl font-semibold dark:text-white mb-1">Featured Projects</h2>
+          <p class="text-center text-sm dark:text-white">Real projects, real impact. Here is what we've been building
+            for our clients.
+
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:grid-cols-3 lg:gap-6">
+
+          <div class=" h-[350px] min-h-[350px]  relative overflow-hidden  rounded-3xl bottom-faders">
+            <img src="/src/images/hero-img.jpg" alt="" class="block w-full h-full object-cover">
+            <div
+              class="bg-black/50 px-4 absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity duration-300 ease-linear group flex flex-col  justify-center">
+              <h1
+                class="mt-50 text-white font-semibold translate-y-[25px] transition-transform duration-300 ease group-hover:translate-y-0">
+                Luxie Fashion Store</h1>
+              <a href=""
+                class="text-white text-sm bg-orange-500  w-fit rounded-sm inline-block mt-2 px-2 py-1 hover:bg-orange-600 translate-y-[25px] transition-all duration-300 ease group-hover:translate-y-0">
+                View
+              </a>
+            </div>
+
+
+          </div>
+
+          <div class=" h-[350px] min-h-[350px]  relative overflow-hidden  rounded-3xl bottom-faders">
+            <img src="/src/images/hero-img.jpg" alt="" class="block w-full h-full object-cover">
+            <div
+              class="bg-black/50 px-4 absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity duration-300 ease-linear group flex flex-col  justify-center">
+              <h1
+                class="mt-50 text-white font-semibold translate-y-[25px] transition-transform duration-300 ease group-hover:translate-y-0">
+                Luxie Fashion Store</h1>
+              <a href=""
+                class="text-white text-sm bg-orange-500  w-fit rounded-sm inline-block mt-2 px-2 py-1 hover:bg-orange-600 translate-y-[25px] transition-all duration-300 ease group-hover:translate-y-0">
+                View
+              </a>
+            </div>
+
+
+          </div>
+
+          <div class=" h-[350px] min-h-[350px]  relative overflow-hidden  rounded-3xl bottom-faders">
+            <img src="/src/images/hero-img.jpg" alt="" class="block w-full h-full object-cover">
+            <div
+              class="bg-black/50 px-4 absolute top-0 left-0 w-full h-full opacity-0 hover:opacity-100 transition-opacity duration-300 ease-linear group flex flex-col  justify-center">
+              <h1
+                class="mt-50 text-white font-semibold translate-y-[25px] transition-transform duration-300 ease group-hover:translate-y-0">
+                Luxie Fashion Store</h1>
+              <a href=""
+                class="text-white text-sm bg-orange-500  w-fit rounded-sm inline-block mt-2 px-2 py-1 hover:bg-orange-600 translate-y-[25px] transition-all duration-300 ease group-hover:translate-y-0">
+                View
+              </a>
+            </div>
+
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+    </section>
+
+
+
+
+    <!--Testimonials-->
+    <section class="py-8 pt-10  mb-20">
+      <div class="my-container">
+        <div class="mb-10">
+          <h2 class="text-center text-2xl md:text-3xl font-semibold dark:text-white mb-1">Our Clients Says</h2>
+          <p class="text-center text-sm dark:text-white">Nothing makes us prouder than happy clients. Here are their
+            stories.
+
+          </p>
+        </div>
+
+
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper ">
+            <!-- Slides -->
+            <div
+              class="swiper-slide min-h-[250px] bg-gray-100 dark:bg-slate-800 dark:text-white flex! justify-center items-center p-4 rounded-[10px] theme-transition">
+              <div class="">
+                <p class="mb-4 leading-7"> <i class="fas fas fa-quote-left text-3xl text-orange-500"></i>
+                  What impressed me most was their commnication. They kept me informed every step of the way and they
+                  delivered
+                  exactly i needed on time.
+                  <i class="fas fas fa-quote-right text-3xl text-orange-500"></i>
+
+                </p>
+                <h3 class="text-right mr-4 font-medium italic">Ayeni Opeyemi</h3>
+                <p class="text-right mr-4 italic text-[0.8rem]">Ikeja, Lagos.</p>
+              </div>
+            </div>
+
+            <div
+              class="swiper-slide min-h-[250px] bg-gray-100 dark:bg-slate-800 dark:text-white flex! justify-center items-center p-4 rounded-[10px] theme-transition">
+              <div class="">
+                <p class="mb-4 leading-7"> <i class="fas fas fa-quote-left text-3xl text-orange-500"></i>
+                  slide
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloribus architecto
+                  consectetur corrupti doloremque fuga eum eveniet numquam cupiditate nesciunt.
+                  <i class="fas fas fa-quote-right text-3xl text-orange-500"></i>
+
+                </p>
+                <h3 class="text-right mr-4 font-medium italic">Oke Alexander</h3>
+                <p class="text-right mr-4 italic text-[0.8rem]">Ikeja, Lagos.</p>
+              </div>
+            </div>
+
+            <div
+              class="swiper-slide min-h-[250px] bg-gray-100 dark:bg-slate-800 dark:text-white flex! justify-center items-center p-4 rounded-[10px] theme-transition">
+              <div class="">
+                <p class="mb-4 leading-7"> <i class="fas fas fa-quote-left text-3xl text-orange-500"></i>
+                  slide
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. At doloribus architecto
+                  consectetur corrupti doloremque fuga eum eveniet numquam cupiditate nesciunt.
+                  <i class="fas fas fa-quote-right text-3xl text-orange-500"></i>
+
+                </p>
+                <h3 class="text-right mr-4 font-medium italic">Olorode Micheal</h3>
+                <p class="text-right mr-4 italic text-[0.8rem]">Ikeja, Lagos.</p>
+              </div>
+            </div>
+
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination mt-8 relative!"></div>
+
+
+          <div class="hidden sm:block">
+            <div
+              class="swiper-button-prev custom-prev text-white! px-4 py-2 rounded-full  bg-orange-500 text-[0.8rem]! transition-opacity duration-300 ease-linear opacity-5 hover:opacity-85">
+              <i class="fas fas fa-arrow-left"></i>
+            </div>
+            <div
+              class="swiper-button-next custom-next text-white! px-4 py-2 rounded-full bg-orange-500 text-[0.8rem]!  transition-opacity duration-300 ease-linear opacity-5 hover:opacity-85">
+              <i class="fas fas fa-arrow-right"></i>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <!--CTA-->
+    <section class=" mb-20">
+      <div class="my-container  rounded-2xl overflow-hidden  relative ">
+
+        <div
+          class="mx-auto  min-h-[400px] bg-[url('/src/images/hero-img.jpg')] bg-no-repeat bg-cover bg-center bg-fixed rounded-2xl overflow-hidden  flex flex-col items-center justify-center relative ">
+          <div class="relative z-2 ">
+            <h2 class="text-white text-center">Hire Us Now</h2>
+            <h1 class="text-white text-center text-2xl lg:text-4xl font-medium mb-6">We Are Always Ready To Attend To
+              You
+            </h1>
+            <button class="py-2 px-4 bg-blue-500 rounded-sm text-white mx-auto block">Get Started</button>
+          </div>
+          <div class="bg-black/70 absolute top-0 left-0 w-full h-full z-1"></div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+
+
+  <footer class="bg-slate-800 p-10 flex items-center justify-center border-4 border-red-700 mt-40">
+    <h1 class="text-white text-2xl">Footer</h1>
+  </footer>
+  <script src="packages/swiper-bundle.min.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

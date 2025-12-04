@@ -1,0 +1,175 @@
+
+@import "tailwindcss";
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme{
+
+  /*Animation */
+
+
+  @keyframes slideInLeft{
+    from{
+     transform: translateX(-190px);
+     opacity: 0;
+    }to{
+      transform: translateX(0);
+      opacity: 1
+
+    }
+  }
+
+  @keyframes show{
+    from{
+      opacity: 0
+    }to{
+      opacity: 1
+    }
+  }
+  --animate-show: show 1s ease forwards;
+  --animate-slideInLeft: slideInLeft 0.8s ease forwards;
+
+
+
+  /*BreakPoints */
+   --breakpoint-mdl:61.875rem;
+   --breakpoint-xtrasmall: 34.375rem;
+  /* Colors */
+  --color-pri-col: #FFCE1A;
+  --color-sec-col: #0D0842;
+  --color-black-bg: "#F3F3F3";
+  --color-favorite: #FF5841;
+
+  /* FOnts*/
+  
+  --default-font-family: "Montserrat", system-ui, sans-serif;
+  --font-pri-font:  "Montserrat", sans-serif;
+  --font-sec-font: "Nunito Sans", sans-serif;
+   --font-roboto: "Roboto", sans-serif;
+
+   
+  
+   
+}
+
+
+*{
+  /* transition: color .4s ease, background .4s ease; */
+}
+
+.theme-transition{
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+.my-container{
+  @apply mx-auto py-4 px-6 
+   xtrasmall:max-w-[550px] sm:px-0
+   md:max-w-[700px] lg:max-w-[1000px] xl:max-w-[1200px] lg:px-8
+  ;
+}
+header.slide-down{
+  @apply fixed bg-gray-50 dark:bg-slate-900;
+  animation: slidedown 0.2s forwards;
+}
+header.slide-down nav ul li a{
+  @apply lg:text-slate-800 lg:dark:text-white;
+}
+header.slide-down nav ul li a.active{
+  @apply text-orange-500;
+}
+header.slide-down div #theme-toggle,
+header.slide-down #menu-toggle{
+  @apply text-slate-900 dark:text-white;
+}
+
+
+.from-left{
+  opacity: 0;
+  transform: translateX(-50%);
+}
+
+.from-right{
+  opacity: 0;
+  transform: translateX(50%);
+}
+.from-right, .from-left{
+  transition: opacity, transform 1s ease-in;
+}
+
+.from-left.appear, .from-right.appear{
+  opacity: 1;
+ transform: translateX(0);
+}
+
+.faders{
+  @apply opacity-0 transition-opacity duration-1000 ease-linear;
+}
+
+.faders.appear{
+   @apply opacity-100;
+}
+
+.bottom-faders{
+  transform: translateY(80px);
+  opacity: 0;
+  transition: transform 0.7s ease-in, opacity 0.7s ease-in;
+}
+
+.bottom-faders.appear{
+ transform: translateY(0);
+ opacity: 1;
+ 
+}
+
+
+@keyframes slidedown{
+  from{
+    top: -200px;
+  }
+  to{
+    top: 0;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.2);
+
+  }
+}
+
+.fade{
+  right: 0;
+  transition: all 0.3s ease;
+  
+}
+
+.fade div:nth-child(1){
+
+  opacity: 1;
+  transition: opacity 1.3s ease;
+}
+
+.nav-menu {
+  @apply fixed h-screen top-0 transition-[right] duration-300 ease-linear;
+}
+.nav-menu.active{
+  @apply right-0;
+}
+.nav-transition{
+  @apply transition-colors duration-300 ease-linear hover:text-orange-500;
+}
+
+.swiper-pagination-bullet{
+  @apply bg-gray-400;
+}
+.swiper-pagination-bullet-active{
+  @apply bg-orange-500;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus{
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  background-color: red !important;
+  color: inherit !important;
+}
